@@ -1,0 +1,9 @@
+# CASIO BASIC - contoh dasar
+ClrText
+Locate 1,1,"HALO CASIO!"
+Locate 1,3,"MASUKKAN ANGKA"
+?→A
+A*2→B
+Locate 1,5,"HASIL X2:"
+Locate 11,5,B
+Stop

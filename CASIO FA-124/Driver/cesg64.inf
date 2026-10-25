@@ -1,0 +1,61 @@
+;===========================================================
+; CESG502 64bit USB Function Driver information file @@myan
+; Copyright (c) 2002-2007 CASIO COMPUTER CO.,LTD.
+;===========================================================
+[Version]
+Signature="$CHICAGO$"
+Class=USB
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+provider=%ProviderName%
+CatalogFile=cesg64.cat
+DriverVer=01/29/2007, 1.0.2.0
+
+[Manufacturer]
+%MfgName%=Casio,NTamd64
+
+[Casio]
+; no support Windows 9x
+
+[Casio.NTamd64]
+%DevName%=PVUSB, USB\VID_07CF&PID_6101
+
+[DestinationDirs]
+PVUSB.Files = 10,System32\Drivers
+
+[PVUSB.NTamd64]
+CopyFiles=PVUSB.Files
+
+[PVUSB.NTamd64.Services]
+AddService = PVUSB, 0x00000002, PVUsbService_Inst
+
+[PVUSB.NTamd64.HW]
+AddReg=PVUSB.AddReg.HW
+
+[PVUSB.AddReg.HW]
+HKR,,"DEV_GUID",,{CDE970E0-E265-11d5-8E17-0000C0CBB2F3}
+
+[PVUsbService_Inst]
+DisplayName    = %SvcName%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 0               ; SERVICE_ERROR_IGNORE
+ServiceBinary  = %12%\CESG64.sys
+LoadOrderGroup = Extended base
+
+[PVUSB.Files]
+CESG64.sys
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+CESG64.sys = 1,,
+
+;---------------------------------------------------------------;
+
+[Strings]
+ProviderName="CASIO"
+MfgName="CASIO COMPUTER CO.,LTD."
+DevName="CESG502 USB"
+SvcName = "CESG502 64bit USB Driver"
+DiskId1 = "CESG502 64bit Driver Disk"

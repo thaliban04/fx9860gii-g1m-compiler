@@ -1,0 +1,22 @@
+CASIO fx-9860GII - COMPILER CASIO BASIC TXT KE G1M
+=================================================
+
+CARA SUPER CEPAT (WINDOWS)
+1. Install Python 3 dari https://www.python.org/downloads/
+2. Buka folder proyek yang sudah diekstrak.
+3. Klik dua kali BUAT_G1M.bat
+4. File berhasil tersimpan di output\BLOK112.g1m
+5. Import file tersebut melalui FA-124 ke kalkulator.
+
+BUAT PROGRAM SENDIRI
+1. Tulis kode CASIO BASIC pada file .txt dengan Notepad/VS Code.
+2. Tarik file .txt tersebut ke ikon BUAT_G1M.bat.
+3. Jika nama program terlalu panjang, gunakan perintah terminal ini:
+
+py -3 g1m_compiler.py build nama_file.txt --name TES001 --output output\TES001.g1m
+
+PENTING
+- Ini mengompilasi CASIO BASIC, bukan Python ataupun C.
+- Tidak semua perintah CASIO BASIC telah didukung.
+- Setiap program baru tetap harus diuji di kalkulator.
+- Baca README.md dan docs\PANDUAN_ID.md untuk penjelasan lengkap.

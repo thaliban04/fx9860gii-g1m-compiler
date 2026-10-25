@@ -1,0 +1,19 @@
+# ==============================================================================
+# CONTOH SKRIP GUI CASIO FX-9860GII (.G1A ADD-IN)
+# ==============================================================================
+APP "TOMLIN", "Tomlin Pro", "01.00.0000"
+ICON "calculator"
+HEADER "TOMLIN SURVEYOR v1.0"
+
+TEXT "Koordinat X : 124.500 m"
+TEXT "Koordinat Y : 340.250 m"
+TEXT "Elevasi Z   :  45.120 m"
+TEXT "Status GPS  : FIX (3D)"
+TEXT "Akurasi     : +/- 0.005 m"
+
+FKEY 1, "UKUR"
+FKEY 2, "REKAM"
+FKEY 3, "PETA"
+FKEY 4, "HITUNG"
+FKEY 5, "SETTING"
+FKEY 6, "KELUAR"
